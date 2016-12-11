@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<style>
+		ul,
+		p {
+			margin:0;
+			padding:0;
+			list-style: none;
+		}
+		#wrap {
+			width:460px;
+			height:200px;
+			margin:0 auto;
+			overflow: hidden;
+		}
+		#wrap p {
+			font:16px/32px "微软雅黑";
+			float:left;
+		}
+		#wrap span {
+			font:16px/32px "微软雅黑";
+			float:left;
+			margin-left:10px;
+		}
+		#box {
+			float:left;
+		}
+		#box li{
+			width:20px;
+			height:22px;
+			margin:5px;
+			float:left;
+			background:url(img/star.png) no-repeat;
+		}
+		#box .active {
+			background:url(img/Ystar.png) no-repeat;
+		}
+	</style>
+	</head>
+	<body>
+		
+		<div id="wrap">
+			<p>请打分：</p>
+			<ul id="box">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<span></span>
+		</div>
+		<script src="JQ/jquery-3.1.1.min.js"></script>
+		<script>
+			$("#box").children().mouseover(function(){
+				$("#box").children().removeClass("active");
+				$(this).addClass("active");
+			})
+			$("#box").children().mouseout(function(){
+				$("#box").children().removeClass("active");
+			})
+		</script>
+	</body>
+</html>

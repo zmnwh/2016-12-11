@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<style>
+		ul,
+		p {
+			margin:0;
+			padding:0;
+			list-style: none;
+		}
+		#wrap {
+			width:500px;
+			height:500px;
+			margin:0 auto;
+		}
+		#messg {
+			width:498px;
+			height:358px;
+			border:1px solid #000;
+			overflow: auto;
+		}
+		#messg li {
+			margin-top:2px;
+			background:red;
+		}
+		.left {
+			font:16px/30px "微软雅黑";
+			padding-left:10px;
+			float:left;
+		}
+		.right {
+			font:16px/30px "微软雅黑";
+			
+			float:right;
+			margin:0 10px;
+		}
+		#txt {
+			width:100%;
+			height:100px;
+			margin-top:5px;
+			overflow: auto;
+			resize: none;
+			box-sizing: border-box;
+		}
+		#btn {
+			width:100%;
+			height:40px;
+		}
+	</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<ul id="messg">
+				<li>
+					<p class="left">嘤嘤嘤，萌妹子？</p>
+					<p class="right">X</p>
+				</li>
+				
+			</ul>
+			<textarea id="txt"></textarea>
+			<input type="button" id="btn" value="发表留言" />
+		</div>
+	</body>
+</html>

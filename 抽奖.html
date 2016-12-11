@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<style>
+		ul,
+		p {
+			margin:0;
+			padding:0;
+			list-style: none;
+		}
+		#wrap {
+			width:424px;
+			height:424px;
+			margin:100px auto;
+			position:relative;
+		}
+		#top {
+			position:relative;
+		}
+		#top li{
+			width:100px;
+			height:100px;
+			border:3px solid #000;
+			background: gray;
+			text-align: center;
+			font:60px/100px "微软雅黑";
+			color: #fff;
+			position:absolute;
+		}
+		
+		#top li:nth-child(1) {
+			top:0;
+			left:0;
+		}
+		#top li:nth-child(2) {
+			top:0;
+			left:106px;
+		}
+		#top li:nth-child(3) {
+			top:0;
+			left:212px;
+		}
+		#top li:nth-child(4) {
+			top:0;
+			left:318px;
+		}
+		#top li:nth-child(5) {
+			top:106px;
+			right:0;
+		}
+		#top li:nth-child(6) {
+			top:212px;
+			right:0;
+		}
+		#top li:nth-child(7) {
+			top:318px;
+			right:0;
+		}
+		#top li:nth-child(8) {
+			top:318px;
+			right:106px;
+		}
+		#top li:nth-child(9) {
+			top:318px;
+			right:212px;
+		}
+		#top li:nth-child(9) {
+			top:318px;
+			left:106px;
+		}
+		#top li:nth-child(10) {
+			top:318px;
+			left:0;
+		}
+		#top li:nth-child(11) {
+			top:212px;
+			left:0;
+		}
+		#top li:nth-child(12) {
+			top:106px;
+			left:0;
+		}
+		#btn {
+			
+		}
+		#top .active {
+			border-color:red;
+		}
+	</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<ul id="top">
+				<li class="tp active ">1</li>
+				<li class="tp">2</li>
+				<li class="tp">3</li>
+				<li class="tp">4</li>
+				<li class="right">5</li>
+				<li class="right">6</li>
+				<li class="bottom">7</li>
+				<li class="bottom">8</li>
+				<li class="bottom">9</li>
+				<li class="bottom">10</li>
+				<li class="left">11</li>
+				<li class="left">12</li>
+			</ul>
+		</div>
+		<input type="button" id="btn" value="开始" />
+		<input type="button" id="stop" value="停止" />
+		<script src="JQ/jquery-3.1.1.min.js"></script>
+		<script>
+			var num=0;
+			var timer=null;
+			$("#btn").click(function(){
+				timer=setInterval(function(){
+					num++;	
+					if(num>$("#top li").length){
+						num=0;
+						
+					}else{
+						$("#top li").eq(num).addClass("active").siblings().removeClass("active");
+					}	
+					console.log(num)
+				},100)	
+			})
+			$("#stop").click(function(){
+				clearInterval(timer);
+			})
+			
+		</script>
+	</body>
+</html>

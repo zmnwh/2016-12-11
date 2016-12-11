@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<style>
+		body{
+			margin:0;
+		}
+		ul {
+			margin:0;
+			padding:0;
+			list-style: none;
+		}
+		li {
+			width:60px;
+			height:60px;
+			background: green;
+			float:left;
+			margin:10px;
+		}
+	</style>
+	</head>
+	<body>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<script src="JQ/jquery-3.1.1.min.js"></script>
+		<script>
+			$("li").each(function(i,e){
+				$(e).css({
+					top:$(e).offset().top,
+					left:$(e).offset().left
+				})
+			})
+			$("li").css("position","absolute");
+			
+			$("li").each(function(i,e){
+				$(this).click(function(){
+					var $prev=$(this).prev().siblings();
+					$(this).animate({top:100});
+					if(this){
+						
+					}
+				})
+			})
+			
+		</script>
+	</body>
+</html>
